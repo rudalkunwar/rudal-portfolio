@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from './components/partials/Header'
 
 function App() {
   return (
     <div>
-      Hello
+      <Header/>
     </div>
   )
 }
