@@ -70,33 +70,33 @@ function Header() {
             </Link>
 
             <Link
-              to="/solutions"
+              to="/about"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              Solutions
+              About
             </Link>
 
             <Link
-              to="/resources"
+              to="/contact"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              Resources
+              Contact
             </Link>
 
             <Link
-              to="/pricing"
+              to="/skills"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              Pricing
+              My Skills
             </Link>
           </div>
 
           <Link
-            to="/get-started"
+            to="/"
             className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
             role="button"
           >
-            Contact me now
+            Download CV
           </Link>
         </nav>
 
@@ -116,35 +116,35 @@ function Header() {
               </Link>
 
               <Link
-                to="/solutions"
+                to="/about"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                Solutions
+                About
               </Link>
 
               <Link
-                to="/resources"
+                to="/contact"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                Resources
+                Contact
               </Link>
 
               <Link
-                to="/pricing"
+                to="/skills"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                Pricing
+                My Skills
               </Link>
             </div>
           </div>
 
           <div className="px-6 mt-6">
             <Link
-              to="/get-started"
+              to="/"
               className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
               role="button"
             >
-            Contact me now
+            Download CV
             </Link>
           </div>
         </nav>
