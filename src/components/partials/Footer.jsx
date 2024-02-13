@@ -39,7 +39,7 @@ function Footer() {
             <ul className="text-gray-600">
               <li>
                 <Link
-                  to="#"
+                  to="https://github.com/rudalkunwar/"
                   className="flex items-center space-x-2 text-gray-600 hover:text-blue-500"
                 >
                   <BsGithub />
@@ -75,7 +75,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="https://www.facebook.com/kuns.ruzal"
                   className="flex items-center space-x-2 text-gray-600 hover:text-blue-500"
                 >
                   <BsFacebook />

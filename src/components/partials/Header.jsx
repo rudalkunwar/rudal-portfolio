@@ -7,6 +7,17 @@ function Header() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const handleDownload = () => {
+    const anchor = document.createElement("a");
+    anchor.href = "/cv/Rudal_kunwar_CV.pdf"; // Replace with the path to your PDF file
+    anchor.download = "Rudal-cv.pdf"; // Specify the filename for the downloaded file
+    anchor.click();
+    // // Delayed removal of the anchor element
+    // setTimeout(() => {
+    //   document.body.removeChild(anchor);
+    // }, 100);
+  };
+
   return (
     <header className="pb-6 bg-white lg:pb-0">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -91,13 +102,12 @@ function Header() {
             </Link>
           </div>
 
-          <Link
-            to="/"
+          <button
+            onClick={handleDownload}
             className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
-            role="button"
           >
             Download CV
-          </Link>
+          </button>
         </nav>
 
         {/* xs to lg */}
@@ -139,13 +149,12 @@ function Header() {
           </div>
 
           <div className="px-6 mt-6">
-            <Link
-              to="/"
+            <button
+              onClick={handleDownload}
               className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
-              role="button"
             >
-            Download CV
-            </Link>
+              Download CV
+            </button>
           </div>
         </nav>
       </div>
