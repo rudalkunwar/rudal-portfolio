@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  BsDribbble,
   BsFacebook,
   BsGithub,
   BsInstagram,
