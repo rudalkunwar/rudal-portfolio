@@ -88,17 +88,17 @@ function Header() {
             </Link>
 
             <Link
-              to="/contact"
-              className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-            >
-              Contact
-            </Link>
-
-            <Link
               to="/skills"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
               My Skills
+            </Link>
+
+            <Link
+              to="/contact"
+              className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+            >
+              Contact
             </Link>
           </div>
 
@@ -133,17 +133,16 @@ function Header() {
               </Link>
 
               <Link
-                to="/contact"
-                className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-              >
-                Contact
-              </Link>
-
-              <Link
                 to="/skills"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
                 My Skills
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+              >
+                Contact
               </Link>
             </div>
           </div>
