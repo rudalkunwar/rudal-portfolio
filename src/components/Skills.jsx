@@ -62,7 +62,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="py-8 bg-gray-100">
+    <div className="py-8 bg-gray-100" id="skills">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
           MY SKILLS

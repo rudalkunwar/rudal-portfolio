@@ -48,7 +48,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="https://np.linkedin.com/in/rudal-kunwar-4561bb260"
                   className="flex items-center space-x-2 text-gray-600 hover:text-blue-500"
                 >
                   <BsLinkedin />
