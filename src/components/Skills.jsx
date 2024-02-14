@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  RiHtml5Fill,
-  RiCss3Fill,
-  RiJavascriptFill,
-  RiReactjsFill,
-} from "react-icons/ri";
-import { FaLaravel,FaPhp,FaWordpress } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
+import { RiHtml5Fill, RiCss3Fill, RiJavascriptFill } from "react-icons/ri";
+import { FaLaravel, FaPhp, FaWordpress } from "react-icons/fa";
+import { SiMysql, SiTailwindcss } from "react-icons/si";
 import MERN from "./MERN";
 
 const Skills = () => {
@@ -48,10 +43,9 @@ const Skills = () => {
       icon: <MERN />, // Replace YourMERNStackIconComponent with the actual MERN Stack icon component
     },
     {
-      title: "React",
-      description:
-        "React is a JavaScript library for building user interfaces, often used for single-page applications.",
-      icon: <RiReactjsFill size={40} />,
+      title: "Tailwind CSS",
+      description: "Tailwind CSS is a utility-first CSS framework.",
+      icon: <SiTailwindcss size={40} />,
     },
     {
       title: "MySQL",
@@ -68,7 +62,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="py-8">
+    <div className="py-8 bg-gray-100">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
           MY SKILLS
