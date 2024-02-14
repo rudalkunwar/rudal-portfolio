@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  RiHome2Fill,
+  RiUserFill,
+  RiFileList2Fill,
+  RiContactsFill,
+  RiDownload2Fill,
+} from "react-icons/ri";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,15 +14,12 @@ function Header() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
   const handleDownload = () => {
     const anchor = document.createElement("a");
     anchor.href = "/cv/Rudal_kunwar_CV.pdf"; // Replace with the path to your PDF file
     anchor.download = "Rudal-cv.pdf"; // Specify the filename for the downloaded file
     anchor.click();
-    // // Delayed removal of the anchor element
-    // setTimeout(() => {
-    //   document.body.removeChild(anchor);
-    // }, 100);
   };
 
   return (
@@ -25,11 +29,6 @@ function Header() {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex">
-              {/* <img
-                className="w-auto h-8 lg:h-10"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg"
-                alt=""
-              /> */}
               <b>RudalKunwar</b>
             </Link>
           </div>
@@ -74,31 +73,31 @@ function Header() {
 
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
             <Link
-              to="/features"
+              to="/home"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              Features
+              <RiHome2Fill className="inline-block mr-1" /> Home
             </Link>
 
             <Link
               to="/about"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              About
+              <RiUserFill className="inline-block mr-1" /> About
             </Link>
 
             <Link
               to="/skills"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              My Skills
+              <RiFileList2Fill className="inline-block mr-1" /> My Skills
             </Link>
 
             <Link
               to="/contact"
               className="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
-              Contact
+              <RiContactsFill className="inline-block mr-1" /> Contact
             </Link>
           </div>
 
@@ -106,7 +105,7 @@ function Header() {
             onClick={handleDownload}
             className="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
           >
-            Download CV
+            <RiDownload2Fill className="inline-block mr-1" /> Download CV
           </button>
         </nav>
 
@@ -119,30 +118,30 @@ function Header() {
           <div className="flow-root">
             <div className="flex flex-col px-6 -my-2 space-y-1">
               <Link
-                to="/features"
+                to="/home"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                Features
+                <RiHome2Fill className="inline-block mr-1" /> Home
               </Link>
 
               <Link
                 to="/about"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                About
+                <RiUserFill className="inline-block mr-1" /> About
               </Link>
 
               <Link
                 to="/skills"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                My Skills
+                <RiFileList2Fill className="inline-block mr-1" /> My Skills
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                Contact
+                <RiContactsFill className="inline-block mr-1" /> Contact
               </Link>
             </div>
           </div>
@@ -152,7 +151,7 @@ function Header() {
               onClick={handleDownload}
               className="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
             >
-              Download CV
+              <RiDownload2Fill className="inline-block mr-1 mt-2" /> Download CV
             </button>
           </div>
         </nav>
