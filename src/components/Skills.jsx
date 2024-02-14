@@ -1,28 +1,95 @@
 import React from "react";
+import {
+  RiHtml5Fill,
+  RiCss3Fill,
+  RiJavascriptFill,
+  RiReactjsFill,
+} from "react-icons/ri";
+import { FaLaravel,FaPhp,FaWordpress } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+import MERN from "./MERN";
 
-function Skills() {
+const Skills = () => {
+  const skills = [
+    {
+      title: "HTML",
+      description:
+        "Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.",
+      icon: <RiHtml5Fill size={40} />,
+    },
+    {
+      title: "CSS",
+      description:
+        "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in HTML.",
+      icon: <RiCss3Fill size={40} />,
+    },
+    {
+      title: "JavaScript",
+      description:
+        "JavaScript is a programming language that enables interactive web pages and is an essential part of web development.",
+      icon: <RiJavascriptFill size={40} />,
+    },
+    {
+      title: "PHP",
+      description:
+        "PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.",
+      icon: <FaPhp size={40} />,
+    },
+    {
+      title: "Laravel",
+      description:
+        "Laravel is a PHP framework for web artisans, providing expressive and elegant syntax while building web applications.",
+      icon: <FaLaravel size={40} />,
+    },
+    {
+      title: "MERN Stack",
+      description:
+        "The MERN stack is a JavaScript stack used for building full-stack web applications, consisting of MongoDB, Express.js, React.js, and Node.js.",
+      icon: <MERN />, // Replace YourMERNStackIconComponent with the actual MERN Stack icon component
+    },
+    {
+      title: "React",
+      description:
+        "React is a JavaScript library for building user interfaces, often used for single-page applications.",
+      icon: <RiReactjsFill size={40} />,
+    },
+    {
+      title: "MySQL",
+      description:
+        "MySQL is an open-source relational database management system.",
+      icon: <SiMysql size={40} />, // Replace YourMySQLIconComponent with the actual MySQL icon component
+    },
+    {
+      title: "WordPress",
+      description:
+        "WordPress is a free and open-source content management system.",
+      icon: <FaWordpress size={40} />, // Replace YourWordPressIconComponent with the actual WordPress icon component
+    },
+  ];
+
   return (
-    <div className="h-screen">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-[var(--inner-gutter)]">
-        <div class="">
-          <a class="bg-[#fff] text-[#202123] rounded-lg w-full flex items-start p-spacing-4 gap-x-16 h-full">
-            <div class="flex flex-col">
-              <span class="font-semibold text-lg">Coding Wizard</span>
-              <span class="block text-sm mt-[0.5em]">
-                Debugs and improves code to meet specific standards.
-              </span>
+    <div className="py-8">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl md:text-6xl font-bold text-black mb-8">
+          MY SKILLS
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 my-2">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <div className="mb-4 flex justify-center">{skill.icon}</div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                {skill.title}
+              </h3>
+              <p className="text-gray-600">{skill.description}</p>
             </div>
-          </a>
-          <img
-            class="w-[46px] md:w-[64px] lg:w-[92px] aspect-square shrink-0 rounded-full block ml-auto"
-            src="https://cdn.openai.com/chatgpt-enterprise/gpts/r1/coding-wizard.png"
-            loading="lazy"
-            alt="Coding Wizard"
-          />
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Skills;
