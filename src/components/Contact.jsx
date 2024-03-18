@@ -23,7 +23,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="pt-12 bg-gray-300 z-40">
+    <section id="contact" className="py-20 bg-gray-300 z-40">
       <ToastContainer />
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <h2 className="text-4xl md:text-6xl font-bold text-black mb-8 text-center">

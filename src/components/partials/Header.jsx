@@ -23,7 +23,7 @@ function Header() {
   };
 
   return (
-    <header className="pb-6 bg-white lg:pb-0">
+    <header className="pb-6 bg-white lg:pb-0 fixed top-0 w-full z-50 shadow-md">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* lg+ */}
         <nav className="flex items-center justify-between h-16 lg:h-20">
@@ -73,7 +73,10 @@ function Header() {
 
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
             <Link
-              to="/home"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
               className="text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
               <RiHome2Fill className="inline-block mr-1" /> Home

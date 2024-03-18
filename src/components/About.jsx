@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-10 bg-gradient-to-br from-blue-500 to-blue-400 min-h-screen font-poppins"
+      className="py-20 bg-gradient-to-br from-blue-500 to-blue-400 min-h-screen font-poppins"
     >
       <h2 className="text-4xl md:text-6xl font-bold text-black mb-8 text-center">
         ABOUT ME
@@ -29,9 +29,6 @@ const About = () => {
               <p className="mt-2 mb-6 text-lg leading-7 text-gray-900 px-4">
                 I'm a Full Stack Developer passionate about creating amazing web
                 applications and solving real-world problems using technology.
-              </p>
-              <p className="mb-6 text-lg leading-7 text-gray-900 px-4">
-                Let's build something awesome together!
               </p>
             </div>
           </div>
