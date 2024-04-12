@@ -46,10 +46,10 @@ function Home() {
           </div>
         </div>
         <div className="w-full md:w-1/2">
-          <div className="relative w-full h-80 md:h-auto">
+          <div className="relative w-full h-96 mt-12 md:mt-0 md:h-auto">
             <img
               // src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ29ranhlanJ1MHphb2x3Nmp1OXA3bDBxemw4ajZ6Zm5kcHBsYnAweCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VgGpnYeMVljm1vRA6g/giphy.gif"
-              alt=""
+              alt="goofyluffy"
               src="https://media.tenor.com/UTxKJNlZilwAAAAi/luffy-monkey-d-luffy.gif"
               className="object-cover object-center w-full h-full rounded-lg"
             />
