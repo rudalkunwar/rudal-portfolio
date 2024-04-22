@@ -73,10 +73,10 @@ function Header() {
 
           <div className="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
             <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                duration={500}
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
               className="text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
             >
               <RiHome2Fill className="inline-block mr-1" /> Home
@@ -134,9 +134,9 @@ function Header() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="inline-flex py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                className="inline-flex items-center py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                <RiHome2Fill className="inline-block mr-1" /> Home
+                <RiHome2Fill className="inline-block mr-1" /> <span>Home</span>
               </Link>
 
               <Link
@@ -144,9 +144,9 @@ function Header() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="inline-flex py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                className="inline-flex items-center py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                <RiUserFill className="inline-block mr-1" /> About
+                <RiUserFill className="inline-block mr-1" /> <span>About</span>
               </Link>
 
               <Link
@@ -154,18 +154,20 @@ function Header() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="inline-flex py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                className="inline-flex items-center py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                <RiFileList2Fill className="inline-block mr-1" /> My Skills
+                <RiFileList2Fill className="inline-block mr-1" />{" "}
+                <span>My Skills</span>
               </Link>
               <Link
                 to="contact"
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="inline-flex py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
+                className="inline-flex items-center py-2 text-base cursor-pointer font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
               >
-                <RiContactsFill className="inline-block mr-1" /> Contact
+                <RiContactsFill className="inline-block mr-1" />{" "}
+                <span>Contact</span>
               </Link>
             </div>
           </div>
@@ -173,9 +175,10 @@ function Header() {
           <div className="px-6 mt-6">
             <button
               onClick={handleDownload}
-              className="inline-flex justify-center px-4 py-3 text-base cursor-pointer font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
+              className="inline-flex items-center justify-center px-4 py-3 text-base cursor-pointer font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
             >
-              <RiDownload2Fill className="inline-block mr-1 mt-2" /> Download CV
+              <RiDownload2Fill size={30} className="inline-block mr-1" />
+              <span>Download CV</span>
             </button>
           </div>
         </nav>

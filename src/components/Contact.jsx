@@ -1,25 +1,44 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FcGoogle } from "react-icons/fc";
+import { FaSpinner } from "react-icons/fa";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 
 const Contact = () => {
+  const [isLogged, setLogged] = useState(false);
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
   const formhandeller = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const form = e.target;
-    const formData = new FormData(form); // Create FormData object from form
-
+    const formdata = new FormData(form);
+    const message = formdata.get("message");
+    const username = userData.given_name;
+    const email = userData.email;
+    const emailVerified = userData.email_verified;
     const endpoint = "https://formspree.io/f/mqkrqqqq";
     try {
-      const response = await axios.post(endpoint, formData);
+      const response = await axios.post(endpoint, {
+        username,
+        email,
+        emailVerified,
+        message,
+      });
       if (response.status === 200) {
         toast.success("Message sent successfully!");
         form.reset();
+        setLoading(false);
       } else {
         toast.error("Error occurred, please try again later.");
+        setLoading(false);
       }
     } catch (error) {
       toast.error("Error occurred, please try again later.");
+      setLoading(false);
     }
   };
   return (
@@ -60,38 +79,53 @@ const Contact = () => {
                   onSubmit={formhandeller}
                 >
                   <div className="mb-6">
-                    <input
-                      type="text"
-                      className="w-full shadow-md border-1 border-gray-400 rounded-md py-2 px-4 placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                      placeholder="Your Name"
-                      name="name"
-                      required="required"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <input
-                      type="email"
-                      className="w-full shadow-md border-1 border-gray-400 rounded-md py-2 px-4 placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                      placeholder="Your Email"
-                      name="email"
-                      required="required"
-                    />
-                  </div>
-                  <div className="mb-6">
                     <textarea
                       className="w-full shadow-md border-1 border-gray-400 rounded-md py-2 px-4 placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                      rows="5"
+                      rows="10"
                       placeholder="Message"
                       name="message"
                       required="required"
                     ></textarea>
                   </div>
                   <div className="w-full text-center">
-                    <input
-                      type="submit"
-                      name="submit"
-                      className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-md"
-                    />
+                    {!isLogged ? (
+                      <div className="w-full text-white font-bold py-3 px-6 rounded-md flex justify-center items-center">
+                        <GoogleLogin
+                          onSuccess={(credentialResponse) => {
+                            const userDetails = jwtDecode(
+                              credentialResponse.credential
+                            );
+                            setUserData(userDetails);
+                            setLogged(true);
+                          }}
+                          onError={() => {
+                            console.log("Login Failed");
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div>
+                        <button
+                          type="submit"
+                          name="submit"
+                          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-md flex justify-center items-center gap-2"
+                        >
+                          {loading ? (
+                            <span className="flex items-center justify-center">
+                              <FaSpinner className="animate-spin mr-2" />{" "}
+                              Sending message...
+                            </span>
+                          ) : (
+                            <>
+                              <FcGoogle size={20} />
+                              <p className="px-2 py-2">
+                                Send Message as {userData.given_name}
+                              </p>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </form>
               </div>
