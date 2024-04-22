@@ -88,7 +88,7 @@ function Footer() {
         <hr className="my-6 border-t border-gray-300" />
         <div className="flex flex-col items-center sm:flex-row sm:justify-between">
           <p className="text-gray-600 mb-4 sm:mb-0">
-            © Rudalkunwarnew {Date().getFullYear()}
+            © Rudalkunwarnew {new Date().getFullYear()}
           </p>
         </div>
       </div>
