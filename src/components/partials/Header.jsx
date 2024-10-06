@@ -17,8 +17,8 @@ function Header() {
 
   const handleDownload = () => {
     const anchor = document.createElement("a");
-    anchor.href = "/cv/Rudal_kunwar_CV.pdf"; // Replace with the path to your PDF file
-    anchor.download = "rudalkunwarCV.pdf"; // Specify the filename for the downloaded file
+    anchor.href = "/cv/rudalkunwarCV.pdf.pdf"; 
+    anchor.download = "rudalkunwarCV.pdf"; 
     anchor.click();
   };
 
